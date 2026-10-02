@@ -1,34 +1,3 @@
-// const input = document.querySelector("#text");
-
-// const button = document.querySelector("#btn");
-
-// button.addEventListener("click", () => {
-
-//     let temp = input.value;
-
-//     const scr = document.querySelector(".text");
-//     // const scr=document.createElement("div");
-
-//     const checkbox = document.createElement("input");//d
-//     checkbox.type = "checkbox";
-
-//     const task = document.createElement("span");
-//     task.innerText = temp;
-//     // task.style.display="block";
-
-//     scr.appendChild(checkbox);//scr is parent....checkbox is child of scr...
-//     scr.appendChild(task);
-//     // scr.style.display="block";
-//     input.value="";
-
-//     checkbox.addEventListener("click", () => {
-//         if(checkbox.checked){
-//         task.style.textDecoration = "line-through";}
-//         else{
-//             task.style.textDecoration="none";
-//         }
-//     });
-// });?????????????????????????????????????????????????///////////^^^^^^^^^^//////////////////////////////////////////////////////
 const input = document.querySelector("#text");
 const button = document.querySelector("#btn");
 const scr = document.querySelector(".text");
@@ -152,7 +121,7 @@ if (tasks.length == 0) {
 else {
     let percentage = (count / tasks.length) * 100;
 
-    proval.innerText = percentage + "%------";
+    proval.innerText = percentage + "%";
     progressbar.style.width = percentage + "%";
 }
             localStorage.setItem("tasks", JSON.stringify(tasks));
@@ -192,7 +161,7 @@ else {
 else {
     let percentage = (count / tasks.length) * 100;
 
-    proval.innerText = percentage + "%-------";
+    proval.innerText = percentage + "%";
     progressbar.style.width = percentage + "%";
 }
 
@@ -304,7 +273,7 @@ tasks.forEach((item) => {
 else {
     let percentage = (count / tasks.length) * 100;
 
-    proval.innerText = percentage + "%-----";
+    proval.innerText = percentage + "%";
     progressbar.style.width = percentage + "%";
 }
 
@@ -386,130 +355,3 @@ else {
     proval.innerText = percentage + "%";
     progressbar.style.width = percentage + "%";
 }
-//////////////////////////////////////////////////////^^^^ur code^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-// filter() doesn't directly say "delete this." It says "keep everything except this." That's the key idea.
-// item = the current task/object being checked by filter().
-```js
-const input = document.querySelector("#text");
-const button = document.querySelector("#btn");
-const scr = document.querySelector(".text");
-
-let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
-
-button.addEventListener("click", () => {
-
-    let temp = input.value;
-
-    const taskDiv = document.createElement("div");
-
-    const checkbox = document.createElement("input");
-    checkbox.type = "checkbox";
-
-    const task = document.createElement("span");
-
-    task.innerText = temp;
-
-    task.addEventListener("click", () => {
-        const edit = prompt("Edit your task:", task.innerText);
-
-        if(edit.trim() != ""){
-            task.innerText = edit;
-        }
-    });
-
-    const deleteButton = document.createElement("button");
-
-    deleteButton.innerHTML = '<i class="fa-solid fa-trash"></i>';
-
-
-    if(temp.trim() != ""){
-
-        taskDiv.appendChild(checkbox);
-        taskDiv.appendChild(task);
-        taskDiv.appendChild(deleteButton);
-
-        scr.appendChild(taskDiv);
-
-
-        const newTask = {
-            id: Date.now(),
-            text: temp,
-            completed: false
-        };
-
-        tasks.push(newTask);
-
-
-        // DELETE
-        deleteButton.addEventListener("click", () => {
-
-            taskDiv.remove();
-
-            tasks = tasks.filter((task) => task.id !== newTask.id);
-
-            localStorage.setItem("tasks", JSON.stringify(tasks));
-
-        });
-    }
-
-
-    input.value = "";
-
-    // SAVE ARRAY TO LOCAL STORAGE
-    localStorage.setItem("tasks", JSON.stringify(tasks));
-
-
-    // CHECKBOX
-    checkbox.addEventListener("click", () => {
-
-        if(checkbox.checked){
-            task.style.textDecoration = "line-through";
-        }
-        else{
-            task.style.textDecoration = "none";
-        }
-
-    });
-
-});
-
-
-////////////////////////////////////////////////////
-
-
-tasks.forEach((item) => {
-
-    const taskDiv = document.createElement("div");
-
-    const checkbox = document.createElement("input");
-    checkbox.type = "checkbox";
-
-    const task = document.createElement("span");
-
-    task.innerText = item.text;
-
-    const deleteButton = document.createElement("button");
-
-    deleteButton.innerHTML = '<i class="fa-solid fa-trash"></i>';
-
-
-    taskDiv.appendChild(checkbox);
-    taskDiv.appendChild(task);
-    taskDiv.appendChild(deleteButton);
-
-    scr.appendChild(taskDiv);
-
-
-    // DELETE SAVED TASK
-    deleteButton.addEventListener("click", () => {
-
-        taskDiv.remove();
-
-        tasks = tasks.filter((task) => task.id !== item.id);
-
-        localStorage.setItem("tasks", JSON.stringify(tasks));
-
-    });
-
-});
-```
