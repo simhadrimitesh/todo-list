@@ -1,149 +1,135 @@
-*{
-    padding:0px;
-    margin:0px;
+* {
+    padding: 0px;
+    margin: 0px;
 }
-#heading{
+
+#heading {
     text-align: center;
     color: azure;
 }
-.searchbar{
+
+.searchbar {
     margin-top: 2rem;
     padding-left: 5px;
     padding-right: 10px;
 }
-body{
-    background-color: antiquewhite;
-}
-.screen{
-    margin-top: 2rem;
-}
-#task{
-    color: aliceblue;
-    font-weight: bolder;
-    font-size: 30px;
-    align-items: center;
-    
-}
-/* .active{
-    margin-left: 1025px;
-    font-size: larger;
-    
-    
-}
-.active1{
-    padding-left:20px;
-} */
- /* .active{
-    display:flex;
-    justify-content:;
-    margin-left:1000px;
-    margin-top: 0px;
- } */
-  /* .active {
-    display: flex;
-    justify-content: center;
-    gap: 100px;
-    margin-top: 20px;
-}
 
-.active1 {
-    text-align: center;
-    
-} */
-.content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-/* ////////////////////////////////////////////////// */
-    .active {
-    display: flex;
-    gap: 50px;
-    position: absolute;
-    right: 50px;
-    top: 110px;
-}
-    
-  /* ////////////////////////////////////////////////// */
-
-
-.active1 {
-    text-align: center;
-}
-#btn{
-    border-radius: 10%;
-    background-color: deepskyblue;
-    color: aliceblue;
-     margin-left:18px;
-}
 body {
     margin: 0;
     min-height: 100vh;
     background-image: url("bg2.jpeg");
     background-size: cover;
     background-position: center;
-    /* background-repeat: no-repeat; */
-    /* background-attachment: fixed; */
+    background-color: antiquewhite;
 }
-.task-section{
-    width:800px;
-    height:400px;
-    border:2px solid black;
-    margin-left:130px;
-    margin-top:60px;
-    border-radius:10px;
+
+.screen {
+    margin-top: 2rem;
+}
+
+#task {
+    color: aliceblue;
+    font-weight: bolder;
+    font-size: 30px;
+    align-items: center;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.active {
+    display: flex;
+    gap: 50px;
+    position: absolute;
+    right: 50px;
+    top: 110px;
+}
+
+.active1 {
+    text-align: center;
+}
+
+#btn {
+    border-radius: 10%;
+    background-color: deepskyblue;
+    color: aliceblue;
+    margin-left: 18px;
+}
+
+.task-section {
+    width: 800px;
+    height: 400px;
+    border: 2px solid black;
+    margin-left: 130px;
+    margin-top: 60px;
+    border-radius: 10px;
     background: rgba(15, 20, 40, 0.75);
 }
-.searchbar{
+
+.searchbar {
     margin-top: 100px;
 }
-#a1{
+
+#a1 {
     width: 100px;
     height: 60px;
-    background-color: rgb(1, 17, 244,0.5);
+    background-color: rgb(1, 17, 244, 0.5);
     border-radius: 8%;
 }
-#a3{
+
+#a3 {
     width: 100px;
     height: 60px;
     background-color: rgba(1, 244, 98, 0.5);
     border-radius: 8%;
 }
-#a2{
+
+#a2 {
     width: 100px;
     height: 60px;
-    background-color: rgb(244, 218, 186,0.6);
+    background-color: rgb(244, 218, 186, 0.6);
     border-radius: 8%;
 }
-.pen{
+
+.pen {
     padding-top: 1px;
 }
-#progress{
-    padding-left: 525px;
+
+
+/* =========================
+   PROGRESS SECTION
+   ========================= */
+
+#progbar {
+    text-align: right;
+}
+
+#progress {
     color: aqua;
     font-size: larger;
+}
 
-}
-#progbar{
-    display: inline;
-    
-}
-#progval{
+#progval {
     color: aqua;
+    font-size: larger;
+    margin-left: 10px;
 }
-#Progbar{
-    width:50px;
-    height:10px;
-    background-color: beige;
+
+#load {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
 }
+
 .progress {
     width: 250px;
     height: 12px;
     background-color: lightgray;
     border-radius: 10px;
     overflow: hidden;
-    
 }
 
 #progressbar {
@@ -151,25 +137,24 @@ body {
     height: 100%;
     background-color: deepskyblue;
     border-radius: 10px;
-    
 }
-#load{
-    padding-left: 550px;
-}
-.text{
+
+
+/* ========================= */
+
+.text {
     color: azure;
     font-size: large;
     background: rgba(35, 40, 65, 0.65);
-
-
 }
-.tb{
+
+.tb {
     display: inline;
-    
 }
-.sb{
+
+.sb {
     display: inline-block;
-    width:100px;
-    height:50px;
+    width: 100px;
+    height: 50px;
     background: rgba(15, 20, 40, 0.75);
-};
+}
